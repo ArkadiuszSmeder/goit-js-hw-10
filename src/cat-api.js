@@ -4,7 +4,7 @@ export const fetchBreeds = () => {
   axios.defaults.headers.common['x-api-key'] =
     'live_3WqxKBPPm7Nhb7bH6v5KJekaENAwu83GPEJU9IDPWyNtMxR4uV3pJr6uxDYogigc';
 
-  return axios.get(`https://api.thecatapi.com/v1/breeds`).then(res => res.data);
+  return axios.get(`https://api.thecatapi.com/v1/breeds`).then(res => res.data); // w tej linijce zwracamy obietnicę z tablicą ras 
 };
 
 export const fetchCatByBreed = breedId => {

@@ -11,6 +11,7 @@ try {
   console.log(error);
 }
 
+//opis poniżej
 function renderSelect(breeds) {
   const markup = breeds
     .map(({ id, name }) => {
@@ -20,6 +21,7 @@ function renderSelect(breeds) {
   breedSelect.insertAdjacentHTML('beforeend', markup);
   loader.classList.add('hidden');
 }
+//funkcja która wyszukuje nazwę kota do id razy kota i wrzuca do listy rozwijalnej
 
 breedSelect.addEventListener('change', e => {
   loader.classList.remove('hidden');
