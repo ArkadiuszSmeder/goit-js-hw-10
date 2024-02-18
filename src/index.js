@@ -11,7 +11,7 @@ const errorParagraph = document.querySelector('.error');
 new SlimSelect({
   select: '#selectElement',
   settings: {
-    placeholderText: 'Choise your favorite kitty 😺';
+    placeholderText: 'Choise your favorite kitty 😺'
   },
 });
 
