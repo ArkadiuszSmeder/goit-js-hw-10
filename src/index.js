@@ -3,9 +3,11 @@ import { fetchBreeds, fetchCatByBreed } from './cat-api';
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
+const errorParagraph = document.querySelector('.error');
 
 try {
   loader.classList.remove('hidden');
+  hideError();
   fetchBreeds().then(data => renderSelect(data));
 } catch (error) {
   console.log(error);
@@ -24,7 +26,13 @@ function renderSelect(breeds) {
 breedSelect.addEventListener('change', e => {
   loader.classList.remove('hidden');
   catInfo.innerHTML = '';
-  fetchCatByBreed(e.target.value).then(data => renderCat(data[0]));
+  hideError();
+  fetchCatByBreed(e.target.value)
+    .then(data => renderCat(data[0]))
+    .catch(error => {
+      console.error('Error fetching cat by breed:', error);
+      showError();
+    });
 });
 
 function renderCat(catData) {
@@ -42,4 +50,12 @@ function renderCat(catData) {
     </div>`
   );
   loader.classList.add('hidden');
+}
+
+function showError() {
+  errorParagraph.classList.remove('hidden'); 
+}
+
+function hideError() {
+  errorParagraph.classList.add('hidden');
 }
