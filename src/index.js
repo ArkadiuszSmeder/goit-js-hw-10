@@ -23,8 +23,8 @@ function renderSelect(breeds) {
 
 breedSelect.addEventListener('change', e => {
   loader.classList.remove('hidden');
-  fetchCatByBreed(e.target.value).then(data => renderCat(data[0]));
   catInfo.innerHTML = '';
+  fetchCatByBreed(e.target.value).then(data => renderCat(data[0]));
 });
 
 function renderCat(catData) {
