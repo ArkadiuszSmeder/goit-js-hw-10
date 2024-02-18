@@ -39,3 +39,16 @@
     width: 640px; /* Ustawienie szerokości na 200 pikseli */
     height: auto; /* Automatyczne dostosowanie wysokości proporcjonalnie do szerokości */
   }
+
+  .cat-container {
+    display: flex;
+    align-items: center; /* Wyrównanie zawartości w pionie */
+  }
+  
+  .cat-info {
+    margin-right: 20px; /* Odstęp między zawartością a obrazkiem */
+  }
+  
+  .cat-info h2 {
+    margin-bottom: 10px; /* Odstęp na dole nazwy kota */
+  }
