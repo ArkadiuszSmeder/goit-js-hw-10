@@ -41,6 +41,7 @@
   }
 
   .cat-container {
+    margin-top: 20px;
     display: flex;
     align-items: center; /* Wyrównanie zawartości w pionie */
   }
