@@ -46,7 +46,7 @@
   }
   
   .cat-info {
-    margin-right: 20px; /* Odstęp między zawartością a obrazkiem */
+    margin-left: 20px; /* Odstęp między zawartością a obrazkiem */
   }
   
   .cat-info h2 {
