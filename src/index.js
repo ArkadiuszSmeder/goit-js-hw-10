@@ -8,7 +8,7 @@ const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
 new SlimSelect({
-  select: '#single'
+  select: '.breed-select'
 })
 
 try {
