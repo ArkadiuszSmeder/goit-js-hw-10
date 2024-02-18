@@ -9,9 +9,10 @@ const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
 new SlimSelect({
-  select: '#single',
+  select: '#selectElement',
   settings: {
-    placeholderText: 'Choise your favorite kitty 😺'
+    placeholderText: 'Choise your favorite kitty 😺',
+    searchable: false
   },
 });
 
