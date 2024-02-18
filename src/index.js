@@ -1,6 +1,7 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select'
+import 'slim-select/dist/slimselect.css'
 
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
@@ -8,8 +9,11 @@ const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
 new SlimSelect({
-  select: '.breed-select'
-})
+  select: '#selectElement',
+  settings: {
+    placeholderText: 'Choise your favorite kitty 😺';
+  },
+});
 
 try {
   loader.classList.remove('hidden');
