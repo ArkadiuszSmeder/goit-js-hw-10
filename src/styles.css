@@ -36,6 +36,6 @@
   }
 
   .cat-info img {
-    width: 1024px; /* Ustawienie szerokości na 200 pikseli */
+    width: 640px; /* Ustawienie szerokości na 200 pikseli */
     height: auto; /* Automatyczne dostosowanie wysokości proporcjonalnie do szerokości */
   }
