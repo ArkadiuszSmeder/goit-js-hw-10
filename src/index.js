@@ -5,7 +5,7 @@ const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 
 try {
-  loader.classList.remove('hidden');
+  loader.classList.add('hidden');
   fetchBreeds().then(data => renderSelect(data));
 } catch (error) {
   console.log(error);
@@ -19,7 +19,7 @@ function renderSelect(breeds) {
     })
     .join('');
   breedSelect.insertAdjacentHTML('beforeend', markup);
-  loader.classList.add('hidden');
+  loader.classList.remove('hidden');
 }
 //funkcja która wyszukuje nazwę kota do id razy kota i wrzuca do listy rozwijalnej 
 
