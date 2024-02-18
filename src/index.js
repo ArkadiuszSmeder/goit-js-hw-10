@@ -9,7 +9,7 @@ const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
 new SlimSelect({
-  select: '#selectElement',
+  select: '#single',
   settings: {
     placeholderText: 'Choise your favorite kitty 😺'
   },
