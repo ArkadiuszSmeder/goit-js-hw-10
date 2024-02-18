@@ -53,3 +53,7 @@
   .cat-info h2 {
     margin-bottom: 10px; /* Odstęp na dole nazwy kota */
   }
+
+  .breed-select {
+    width: 200px;
+  }
