@@ -7,7 +7,7 @@ const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
-new SlimSelect({
+const slim = new SlimSelect({
   select: '.breed-select'
 })
 
