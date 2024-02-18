@@ -12,7 +12,7 @@ new SlimSelect({
   select: '#selectElement',
   settings: {
     placeholderText: 'Choise your favorite kitty 😺',
-    searchable: false
+    showSearch: false
   },
 });
 
