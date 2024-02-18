@@ -8,14 +8,6 @@ const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
 
-new SlimSelect({
-  select: '#selectElement',
-  settings: {
-    placeholderText: 'Choise your favorite kitty 😺',
-    showSearch: false
-  },
-});
-
 try {
   loader.classList.remove('hidden');
   hideError();
@@ -34,6 +26,14 @@ function renderSelect(breeds) {
   breedSelect.insertAdjacentHTML('beforeend', markup);
   loader.classList.add('hidden');
 }
+
+new SlimSelect({
+  select: '#selectElement',
+  settings: {
+    placeholderText: 'Choise your favorite kitty 😺',
+    showSearch: false
+  },
+});
 
 breedSelect.addEventListener('change', e => {
   loader.classList.remove('hidden');
