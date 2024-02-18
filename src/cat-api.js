@@ -15,7 +15,3 @@ export const fetchCatByBreed = breedId => {
 
 //fetchCatByBreed(breedId), która oczekuje identyfikatora rasy, wykonuje żądanie HTTP i zwraca obietnicę z danymi o kocie - 
 //wynikiem żądania. Umieść ją w pliku cat-api.js i dokonaj nazwanego eksportu.
-
-import axios from "axios";
-
-axios.defaults.headers.common["x-api-key"] = "твой ключ";
