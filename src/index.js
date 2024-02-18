@@ -1,4 +1,5 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
+import Notiflix from 'notiflix';
 
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
@@ -8,7 +9,8 @@ const errorParagraph = document.querySelector('.error');
 try {
   loader.classList.remove('hidden');
   hideError();
-  fetchBreeds().then(data => renderSelect(data));
+  fetchBreeds()
+  .then(data => renderSelect(data));
 } catch (error) {
   console.log(error);
 }
@@ -30,7 +32,7 @@ breedSelect.addEventListener('change', e => {
   fetchCatByBreed(e.target.value)
     .then(data => renderCat(data[0]))
     .catch(error => {
-      console.error('Error fetching cat by breed:', error);
+      Notiflix.Notify.failure('Error fetching cat by breed:', error);
       showError();
     });
 });
