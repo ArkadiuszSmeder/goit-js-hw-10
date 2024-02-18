@@ -26,18 +26,18 @@ function renderSelect(breeds) {
   breedSelect.insertAdjacentHTML('beforeend', markup);
   loader.classList.add('hidden');
 
-  new SlimSelect('.breed-select', {
-    placeholder: 'Choose your favorite kitty 😺'
+  //new SlimSelect('.breed-select', {
+    //placeholder: 'Choose your favorite kitty 😺'
+  //});
+
+  new SlimSelect({
+    select: '#selectElement',
+    settings: {
+      placeholderText: 'Choise your favorite kitty 😺',
+      showSearch: false
+    },
   });
 }
-
-//new SlimSelect({
-  //select: '#selectElement',
-  //settings: {
-    //placeholderText: 'Choise your favorite kitty 😺',
-    //showSearch: false
-  //},
-//});
 
 
 breedSelect.addEventListener('change', e => {
