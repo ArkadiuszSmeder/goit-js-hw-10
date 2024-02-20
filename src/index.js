@@ -7,7 +7,6 @@ const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
 const errorParagraph = document.querySelector('.error');
-
 try {
   loader.classList.remove('hidden');
   hideError();
@@ -47,8 +46,10 @@ breedSelect.addEventListener('change', e => {
   fetchCatByBreed(e.target.value)
     .then(data => renderCat(data[0]))
     .catch(error => {
-      Notiflix.Notify.failure('Error fetching cat by breed:', error);
+      Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!', error);
       showError();
+      loader.classList.add('hidden');
+      errorParagraph.classList.add('hidden');
     });
 });
 
